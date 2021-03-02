@@ -1,0 +1,50 @@
+# Stage 1 - The build process
+FROM node:12-alpine3.11 as build-deps
+
+# install dependencies & set working directory
+COPY ./package.json /app/
+WORKDIR /app
+RUN ["yarn"]
+
+# Copy project
+COPY . /app/
+
+# add `/usr/src/app/node_modules/.bin` to $PATH
+ENV PATH /app/node_modules/.bin:$PATH
+ENV NODE_ENV production
+
+# build the project
+RUN ["yarn", "run" ,"build"]
+
+# Stage 2 - The production environment
+FROM nginx:1.17-alpine
+
+LABEL MAINTAINER="Rami sfari <rami.sfari@gmail.com>"
+
+# replace with custom one
+COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
+COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
+
+WORKDIR /usr/share/nginx/html
+
+# copy the build from stage 1
+COPY --from=build-deps /app/build .
+
+# copy the script to generate dynamic env variables
+COPY ./env.sh /script/
+
+# Create a group and user
+RUN addgroup -S www-nginx && adduser -S www-nginx -G www-data
+
+## add permissions for nginx user
+RUN chmod +x /script/env.sh && chmod -R 755 . && \
+  touch ./env.js /var/run/nginx.pid && \
+  chown -R www-nginx:www-nginx . /var/run/nginx.pid /script/env.sh /var/cache/nginx /var/log/nginx /etc/nginx/conf.d
+
+# Tell docker that all future commands should run as the appuser user
+USER www-nginx
+
+EXPOSE 8080
+
+# update the environment variable & start the nginx server
+CMD /script/env.sh > ./env.js && nginx -g 'daemon off;'

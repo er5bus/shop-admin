@@ -1,0 +1,7 @@
+# documentation
+docs
+*.md
+
+# docker files
+docker-*
+Docker*

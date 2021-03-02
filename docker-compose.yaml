@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  shop_admin:
+    build:
+      context: .
+    volumes:
+      - ./public/media:/app/public/media
+      - ./public/css:/app/public/css
+      - ./public/plugins:/app/public/plugins
+      - ./src:/app/src
+      - ./public/index.html:/app/public/index.html
+      - ./package.json:/app/package.json
+    env_file:
+      - ./.env
+    ports:
+      - "3000:3000"
+    tty: true

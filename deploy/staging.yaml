@@ -1,0 +1,35 @@
+version: '3'
+
+services:
+  second_chance_program_gu_staging_front:
+    image: registry.gitlab.com/unicef-second-chance/lprs-tn-front-gu:v1
+    env_file:
+      - ./.env
+    deploy:
+      replicas: 1
+      resources:
+        limits:
+          cpus: "1"
+          memory: 500mb
+        reservations:
+          memory: 256mb
+      update_config:
+        parallelism: 1
+        delay: 10s
+        failure_action: rollback
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+        window: 120s
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.scp-gu-staging-front.rule=Host(`${SITE_DOMAINE_NAME}`)"
+        - "traefik.http.routers.scp-gu-staging-front.entrypoints=websecure"
+        - "traefik.http.routers.scp-gu-staging-front.tls.certresolver=letsencryptresolver"
+        - "traefik.http.services.scp-gu-staging-front-srv.loadbalancer.server.port=8080"
+
+networks:
+  default:
+    external:
+      name: traefik-net

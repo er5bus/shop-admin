@@ -1,0 +1,99 @@
+{
+  "name": "shop",
+  "version": "0.0.1",
+  "private": true,
+  "author": {
+    "name": "Rami Sfari"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/unicef-second-chance/lprs-tn-front-gu.git"
+  },
+  "dependencies": {
+    "@formatjs/intl-pluralrules": "1.3.5",
+    "@fortawesome/fontawesome-free": "5.13.0",
+    "@fullcalendar/core": "^5.4.0",
+    "@fullcalendar/daygrid": "^5.4.0",
+    "@fullcalendar/interaction": "^5.4.0",
+    "@fullcalendar/list": "^5.4.0",
+    "@fullcalendar/react": "^5.4.0",
+    "@fullcalendar/timegrid": "^5.4.0",
+    "@material-ui/core": "4.11.0",
+    "@material-ui/icons": "4.9.1",
+    "@material-ui/lab": "4.0.0-alpha.53",
+    "@material-ui/styles": "4.9.14",
+    "@react-pdf/renderer": "^1.6.13",
+    "@tanem/svg-injector": "^8.0.64",
+    "@tinymce/tinymce-react": "^3.6.1",
+    "add": "^2.0.6",
+    "axios": "^0.18.0",
+    "bootstrap": "4.5.0",
+    "chart.js": "^2.9.4",
+    "date-fns": "^2.16.1",
+    "fine-uploader": "^5.16.2",
+    "formik": "^2.1.5",
+    "moment": "^2.29.1",
+    "node-sass": "4.13.0",
+    "notistack": "^1.0.3",
+    "pdfmake": "^0.1.70",
+    "rc-time-picker": "^3.7.3",
+    "react": "^16.13.1",
+    "react-bootstrap": "^1.3.0",
+    "react-bootstrap-table-next": "4.0.2",
+    "react-bootstrap-table2-paginator": "2.1.2",
+    "react-chartjs-2": "^2.11.1",
+    "react-content-loader": "^5.0.4",
+    "react-datetime": "^3.0.4",
+    "react-dom": "^16.13.1",
+    "react-dropzone-uploader": "^2.11.0",
+    "react-inlinesvg": "1.2.0",
+    "react-input-mask": "^2.0.4",
+    "react-intl": "3.6.2",
+    "react-perfect-scrollbar": "1.5.8",
+    "react-portal": "^4.2.1",
+    "react-redux": "^7.1.3",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.1",
+    "react-select": "^3.1.0",
+    "redux": "^4.0.5",
+    "redux-persist": "^6.0.0",
+    "redux-thunk": "^2.3.0",
+    "reselect": "^4.0.0",
+    "yarn": "^1.22.5",
+    "yup": "^0.29.2"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@welldone-software/why-did-you-render": "^4.0.6",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "enzyme-to-json": "^3.4.3",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-unused-imports": "^1.0.1",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-mock-store": "^1.5.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

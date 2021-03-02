@@ -1,0 +1,308 @@
+//
+// Dropzone
+//
+
+.dzu-submitButtonContainer {
+  display: none;
+}
+
+.dzu-previewContainer {
+  border-bottom: 1px solid #e4e6ef;
+}
+
+.dzu-previewFileName {
+
+}
+
+.dzu-previewButton {
+  background-size: 2rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 2rem;
+  height: 2rem;
+}
+
+// Base
+.dzu-dropzone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 120px;
+  overflow: scroll;
+  margin: 0 auto;
+  position: relative;
+  box-sizing: border-box;
+  transition: all .15s linear;
+  border: 2px solid #d9d9d9;
+  border-radius: 4px;
+}
+
+.dzu-dropzoneActive {
+  background-color: #DEEBFF;
+  border-color: #2484FF;
+}
+
+.dzu-dropzoneDisabled {
+  opacity: 0.5;
+}
+
+.dzu-dropzoneDisabled *:hover {
+  cursor: unset;
+}
+
+.dzu-input {
+  display: none;
+}
+
+.dzu-inputLabel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-family: 'B612', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #2484FF;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+}
+
+.dzu-inputLabelWithFiles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-start;
+  padding: 0 14px;
+  min-height: 32px;
+  background-color: #E6E6E6;
+  color: #2484FF;
+  border: none;
+  font-family: 'B612', sans-serif;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-left: 3%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+}
+
+.dzu-previewContainer {
+  padding: 40px 3%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  min-height: 60px;
+  border-bottom: 1px solid #ECECEC;
+  box-sizing: border-box;
+}
+
+.dzu-previewStatusContainer {
+  display: flex;
+  align-items: center;
+}
+
+.dzu-previewFileName {
+  font-family: 'B612', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333333;
+}
+
+.dzu-previewImage {
+  width: auto;
+  max-height: 40px;
+  max-width: 140px;
+  border-radius: 4px;
+}
+
+.dzu-previewButton {
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  opacity: 0.9;
+  margin: 0 0 2px 10px;
+}
+
+.dzu-submitButtonContainer {
+  margin: 24px 0;
+}
+
+.dzu-submitButton {
+  padding: 0 14px;
+  min-height: 32px;
+  background-color: #2484FF;
+  border: none;
+  border-radius: 4px;
+  font-family: 'B612', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #FFF;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+}
+
+.dzu-submitButton:disabled {
+  background-color: #E6E6E6;
+  color: #333333;
+  cursor: unset;
+}
+
+.dzu-dropzone {
+  border: 2px solid #e4e6ef;
+}
+
+.dzu-dropzone{
+
+  .dzu-inputLabel {
+    
+    cursor: pointer;
+  }
+  
+  .dzu-previewFileName {
+    color:  $dark-75;
+    margin: 0 0 5px 0;
+    padding: 0;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+  .dzu-dropzone-msg-desc {
+    color:  $text-muted;
+    font-weight: 400;
+    font-size: 1rem;
+  }
+
+  .dz-preview {
+    .dz-image {
+      @include border-radius($border-radius);
+    }
+  }
+
+  .dz-remove {
+    color: $dark-50;
+    font-size: 1px;
+    font-weight: 500;
+    transition: $transition-link;
+
+    &:hover {
+      transition: $transition-link;
+      color: $primary;
+    }
+  }
+
+  // State colors
+  @each $name, $color in $theme-colors {
+    &.dzu-dropzone-#{$name} {
+      border-color: $color;
+    }
+  }
+}
+
+// Multipe upload
+.dzu-dropzone.dzu-dropzone-multi {
+  border: 0;
+  padding: 0;
+
+  .dz-message{
+    display: none;
+  }
+
+  .dzu-dropzone-panel {
+    .dzu-dropzone-upload,
+    .dzu-dropzone-remove-all{
+      display: none;
+    }
+  }
+
+  .dzu-dropzone-item {
+    display: flex;
+    align-items: center;
+    margin-top: 0.75rem;
+    @include border-radius($border-radius);
+    padding: 0.5rem 1rem;
+    background-color: $gray-100;
+
+    .dzu-dropzone-file {
+      flex-grow: 1;
+
+      .dzu-dropzone-filename {
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: $gray-600;
+        text-overflow: ellipsis;
+        margin-right: 0.5rem;
+
+        b {
+          font-size: 0.9rem;
+          font-weight: 500;
+          color: $text-muted;
+        }
+      }
+
+      .dzu-dropzone-error {
+        margin-top: 0.25rem;
+        font-size: 0.9rem;
+        font-weight: 400;
+        color: $danger;
+        text-overflow: ellipsis;
+      }
+    }
+
+    .dzu-dropzone-progress {
+      width: 15%;
+
+      .progress {
+        height: 5px;
+        @include transition;
+      }
+    }
+
+    .dzu-dropzone-toolbar {
+      margin-left: 1rem;
+      display: flex;
+      flex-wrap: nowrap;
+
+      .dzu-dropzone-start,
+      .dzu-dropzone-cancel,
+      .dzu-dropzone-delete {
+        height: 25px;
+        width: 25px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: $transition-link;
+
+        i {
+          transition: $transition-link;
+          font-size: 0.8rem;
+          color: $gray-600;
+        }
+
+        &:hover {
+          transition: $transition-link;
+          i {
+            color: $primary;
+          }
+        }
+      }
+
+      .dzu-dropzone-start{
+        transition: $transition-link;
+      }
+    }
+  }
+}

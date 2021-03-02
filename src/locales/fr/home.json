@@ -1,0 +1,36 @@
+{
+  "HOME.FOLDER.TITLE": "Dossiers",
+  "HOME.FOLDER.DESC": "Nom, prénom, numéro de téléphone, e-mail, ...etc",
+  "HOME.FOLDER.SEARCH": "Rechercher un dossier",
+  "HOME.FOLDER.BUTTON": "Voir tous mes dossiers",
+
+  "HOME.SERVICE.TITLE": "Offres de services",
+  "HOME.SERVICE.DESC": "Nom, type, théme, contrat, mesure, acte ...etc",
+  "HOME.SERVICE.SEARCH": "Rechercher une ODS",
+  "HOME.SERVICE.BUTTON": "Voir tous les offres de service",
+
+  "HOME.PARTNER.TITLE": "Partenaires",
+  "HOME.PARTNER.DESC": "Nom, raison sociale, e-mail, addresse, siret ...etc",
+  "HOME.PARTNER.SEARCH": "Rechercher un partenaire",
+  "HOME.PARTNER.BUTTON": "Voir tous les partenaires",
+
+  "HOME.STRUCTURE.TITLE": "Structures",
+  "HOME.STRUCTURE.DESC": "Ce module permet de gérer les structures et les opérateurs locaux : chaque structure Ma3ak ou Intale9 est caractérisée par un certain nombre d’attributs définissant sa situation  La création d’une nouvelle structure nécessite la désignation d’un responsable disposant de tous les droits d’administration͘.",
+  "HOME.STRUCTURE.SEARCH": "Rechercher une structure",
+  "HOME.STRUCTURE.BUTTON": "Gérer les structures",
+
+  "HOME.USER.TITLE": "Utilisateurs",
+  "HOME.USER.DESC": "Ce module permet de gérer les utilisateurs de la plateforme ,les rôles des acteurs types et les groupes de permissions aux ressources de la plateforme.",
+  "HOME.USER.SEARCH": "Rechercher un utilisateur",
+  "HOME.USER.BUTTON": "Gérer les utilisateurs",
+
+  "HOME.COMMUNICATION.TITLE": "Éditions / Communication",
+  "HOME.COMMUNICATION.DESC": "Ce module permet de gérer les templates  des emails, des SMS qui peuvent être échangés depuis la plateforme  et la délivrance des documents administratifs.",
+  "HOME.COMMUNICATION.SEARCH": "Rechercher une structure",
+  "HOME.COMMUNICATION.BUTTON": "Gérer les éditions / communications",
+
+  "HOME.CODIFICATION.TITLE": "Référentiel de codification",
+  "HOME.CODIFICATION.DESC": "Ce module permet de développer une cartographie des acteurs et des entreprises partenaires proposant des services au dispositif. Il couvre  les services de la tenue de la liste des établissements éducatifs , les types de partenaires , les  types de contrats/conventions mobilisés et des différents types de services.",
+  "HOME.CODIFICATION.SEARCH": "Rechercher un utilisateur",
+  "HOME.CODIFICATION.BUTTON": "Gérer les référentiels de codifications"
+}

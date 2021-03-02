@@ -1,0 +1,64 @@
+//
+// Breadcrumb
+//
+
+.breadcrumb {
+  align-items: center;
+  background-color: #ffffff;
+
+  .breadcrumb-item {
+    a {
+      display: flex;
+      align-items: center;
+    }
+
+    &.active,
+    &:hover {
+      i,
+      a {
+        transition: $transition-link;
+        color: $primary !important;
+      }
+    }
+
+  }
+  .breadcrumb-item + .breadcrumb-item:before {
+    display: inline-block;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    color: #bbbbc8;
+    content: "/";
+  }
+
+  &.breadcrumb-transparent {
+    background-color: transparent;
+    border-radius: 0;
+  }
+
+  &.breadcrumb-dot {
+    .breadcrumb-item {
+      display: flex;
+      align-items: center;
+
+      &:before {
+        display: none;
+      }
+
+      &:after {
+        display: block;
+        content: " ";
+        width: 4px;
+        height: 4px;
+        border-radius: 4px;
+        background: $gray-400;
+        margin-left: $breadcrumb-item-padding;
+      }
+
+      &:last-child {
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+}

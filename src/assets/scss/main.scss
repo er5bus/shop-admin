@@ -1,0 +1,44 @@
+// 3rd-party Plugins
+@import "~perfect-scrollbar/css/perfect-scrollbar.css";
+
+// Theme Styles
+@import "style.react.scss";
+
+// Default Layout themes
+@import "./themes/layout/header/base/light.scss";
+@import "./themes/layout/header/menu/light.scss";
+@import "./themes/layout/brand/dark.scss";
+@import "./themes/layout/aside/dark.scss";
+
+// Header themes
+// Light
+//@import "./themes/layout/header/base/light.scss";
+// Dark
+//@import "./themes/layout/header/base/dark.scss";
+
+// Header Menu themes
+// Light
+//@import "./themes/layout/header/menu/light.scss";
+// Dark
+//@import "./themes/layout/header/menu/dark.scss";
+
+// Brand themes
+//.brand-dark {
+//  @import "./themes/layout/brand/dark.scss";
+//}
+// // Light
+//.brand-light {
+//  @import "./themes/layout/brand/light.scss";
+//}
+
+// Aside themes
+// Dark
+//@import "./themes/layout/aside/dark.scss";
+// Light
+//@import "./themes/layout/aside/light.scss";
+
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+@import "./../plugins/keenthemes-icons/font/ki.css";
+@import "./../plugins/flaticon/flaticon.css";
+@import "./../plugins/flaticon2/flaticon.css";
+@import "./../plugins/big-vesta/big-vesta.css";

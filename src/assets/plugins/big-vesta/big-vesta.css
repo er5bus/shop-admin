@@ -1,0 +1,20 @@
+/**
+ * BigVesta font: BigVesta
+ * Creation date: 2020
+ */
+
+@font-face {
+  font-family: "big-vesta";
+  src: url("./font/BigVesta-Arabic-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-stretch:ultra-expanded	;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "big-vesta";
+  src: url("./font/BigVesta-Arabic-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-stretch:ultra-expanded	;
+  font-style: normal;
+}

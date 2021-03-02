@@ -1,0 +1,136 @@
+//
+// Base
+//
+
+html {
+  height: 100%;
+  overflow: hidden;
+
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#kt_content {
+  height: calc(100vh - 5rem);
+
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+iframe {
+  min-width: 100% !important;
+}
+
+/*[placeholder]:focus::-webkit-input-placeholder {
+  transition: opacity 0.5s 0.5s ease;
+  opacity: 0;
+}*/
+
+::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: $white;
+}
+
+::-webkit-scrollbar
+{
+  width: .5rem;
+  height: .5rem;
+  background-color: $white;
+}
+
+::-webkit-scrollbar-thumb
+{
+  background-color: $gray-500;
+  border-radius: 5rem;
+}
+
+// Body
+body {
+  background: $page-bg;
+}
+
+// Desktop Mode
+@include media-breakpoint-up(lg) {
+
+
+  // Wrapper
+  .wrapper {
+    // Fixed Header
+    .header-fixed & {
+      padding-top: get($header-config, desktop, fixed, height);
+    }
+
+    // Fixed Content Head
+    .header-fixed.subheader-fixed.subheader-enabled & {
+      padding-top: get($header-config, desktop, fixed, height) + get($subheader-config, fixed, height);
+    }
+
+    // Fixed Aside
+    .aside-fixed & {
+      padding-left: get($aside-config, base, width);
+    }
+
+    // Minimize Aside
+    .aside-fixed.aside-minimize & {
+      padding-left: get($aside-config, base, minimized-width);
+    }
+  }
+
+  body[dir*="rtl"].aside-fixed .wrapper {
+    padding-right: get($aside-config, base, width);
+    padding-left: 0rem;
+  }
+
+  body[dir*="rtl"].aside-fixed.aside-minimize .wrapper {
+    padding-right: get($aside-config, base, minimized-width);
+    padding-left: 0rem;
+  }
+
+  // Container
+  .container,
+  .container-fluid {
+    padding: 0 get($page-padding, desktop);
+  }
+}
+
+// Tablet & Mobile Modes
+@include media-breakpoint-down(md) {
+  // Wrapper
+  .wrapper {
+    // Fixed Header
+    .header-mobile-fixed & {
+      padding-top: get($header-config, tablet-and-mobile, fixed, height);
+    }
+
+    // Fixed Subheader
+    .header-mobile-fixed.subheader-mobile-fixed.subheader-enabled & {
+      padding-top: get($header-config, tablet-and-mobile, fixed, height) + get($subheader-config, fixed, height-mobile);
+    }
+  }
+
+  // Container
+  .container,
+  .container-fluid {
+    max-width: none;
+    padding: 0 get($page-padding, tablet-and-mobile);
+  }
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}

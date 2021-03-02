@@ -1,0 +1,24 @@
+{
+  "ERROR.NOT_FOUND.TITLE": "Page non trouvée",
+  "ERROR.NOT_FOUND.SUB_TITLE": "Nous n'arrivons pas à trouver la page que vous recherchez",
+  "ERROR.NOT_FOUND.DESC": "Oups! Il semble que vous ayez suivi un mauvais lien. Si vous pensez qu'il s'agit d'un problème avec nous, veuillez nous en informer.",
+  
+  "ERROR.INTERNAL_ERROR.TITLE": "Erreur interne",
+  "ERROR.INTERNAL_ERROR.SUB_TITLE": "Quelque chose a mal tourné",
+  "ERROR.INTERNAL_ERROR.DESC": "Il est toujours temps de faire une pause-café. Nous devrions être de retour lorsque vous aurez fini votre café.",
+
+  "ERROR.CODE.RESET_PASSWORD_FAILED": "Votre jeton de réinitialisation a expiré ou n'est pas valide.",
+  "ERROR.CODE.FORM_FAILED": "Veuillez vérifier le formulaire puis le renvoyer.",
+  "ERROR.CODE.BAD_CREDENTIALS": "Mauvais mot de passe. Réessayez ou cliquez sur Mot de passe oublié pour le réinitialiser.",
+
+  "ERROR.FORBIDDEN.TITLE": "Accès interdit",
+  "ERROR.FORBIDDEN.SUB_TITLE": "Nous sommes désolés, mais vous n'avez pas accès à cette page ",
+  "ERROR.FORBIDDEN.DESC": "Si vous pensez que c'est une erreur de serveur, veuillez contacter le support",
+
+  "ERROR.CODE.APPOINTMENT_TIME_IS_NOT_VALID": "l'heure du rendez-vous n'est pas valide",
+
+  "ERROR.NOT_FOUND.BUTTON": "Go Back",
+
+  "ERROR.CODE.NOT_FOUND": "La page que vous recherchez a peut-être été supprimée, n'existe plus ou est temporairement indisponible",
+  "ERROR.CODE.INTERNAL_ERROR": "Une erreur s'est produite."
+}

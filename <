@@ -1,0 +1,198 @@
+import React, { useEffect } from "react"
+import { FormattedMessage } from "react-intl"
+import { isEmpty } from "lodash"
+import { shallowEqual, useSelector, useDispatch } from "react-redux"
+
+import { isRLTLang } from "./../../../../../../i18n"
+import { ProtectedContent } from "../../../../../../components/wrappers"
+import { ModalProgressBar } from "../../../../../../components/partials"
+
+import { STATUS, STATUS_COLOR } from "./../../../../UIHelpers/folderStatusUIHelper"
+import { STATE, STATE_COLOR } from "./../../../../UIHelpers/folderStateUIHelper"
+
+import { NavLink } from "react-router-dom"
+
+import AssignmentIndIcon from "@material-ui/icons/AssignmentInd"
+import FaceIcon from "@material-ui/icons/Face";
+import HealingIcon from "@material-ui/icons/Healing";
+import SchoolIcon from "@material-ui/icons/School";
+import PeopleAltIcon from "@material-ui/icons/PeopleAlt";
+import GavelIcon from "@material-ui/icons/Gavel";
+import EventIcon from "@material-ui/icons/Event"
+
+import { fetchFolder } from "./../../store/actions"
+import routes from "./../../routes/forms"
+import detailRoute from "./../../routes/details"
+import rootRoutes from "./../../../../routes"
+
+
+const EditFolder = ({ param }) => {
+
+  const dispatch = useDispatch()
+  // const layoutDispatch = useContext(LayoutContext.Dispatch)
+  const { isFetching, folder } = useSelector(
+    (state) => ({
+      isFetching: state.admin.folder.isFetching,
+      folder: state.admin.folder.folder
+    }),
+    shallowEqual
+  )
+
+  useEffect(() => {
+    if (isEmpty(folder)){
+      dispatch(fetchFolder({ param }))
+    }
+  }, [param, dispatch, folder])
+
+  return (
+    <>
+      {/*<!--begin::Aside-->*/}
+      <div className="flex-row-auto">
+        {/*<!--begin::Profile Card-->*/}
+        <div className="card card-custom card-stretch">
+          {(isFetching) && <ModalProgressBar />}
+          {/*<!--begin::Body-->*/}
+          <div className="card-body">
+            {/*<!--begin::Contact-->*/}
+            { folder && folder.cpDetail && <>
+              <h5 className="text-dark font-weight-bold my-2 mx-2"><FormattedMessage id="FOLDER.INPUT.RESPOSIBLE" /></h5>
+              <div className="d-flex align-items-center">
+                <div className={"symbol symbol-60 symbol-xl-50 m" + (isRLTLang() ? "l" : "r" ) + "-3 align-self-start align-self-xl-center"}>
+                  <span className="symbol-label text-uppercase text-primary font-weight-bold font-size-h4">
+                    { (folder.cpDetail.firstName[0] || "-") + (folder.cpDetail.lastName[0] || "-") }
+                  </span>
+                </div>
+                <div>
+                  <span className="font-weight-bolder mx-5 font-size-h5 text-dark-75 text-hover-primary">
+                    <div className="text-dark m-0 flex-grow-1 mr-3 font-size-h5">
+                      { isRLTLang() ?
+                        <>{folder.cpDetail.firstNameAr || "----"} {folder.cpDetail.lastNameAr || "----"}</> :
+                        <>{folder.cpDetail.firstName || "----"} {folder.cpDetail.lastName || "----"}</>
+                      }
+                    </div>
+
+                  </span>
+                  <div className="text-muted"></div>
+                </div>
+              </div>
+              </>
+            }
+            <div className="text-right">
+              <NavLink to={rootRoutes.folderAppointments.path.replace(":param", param)} className="btn btn-sm btn-primary mx-3" >
+                <FormattedMessage id="FOLDER.GET_APPOINTMENT" />
+              </NavLink>
+              <NavLink to={rootRoutes.userAppointments.path.replace(":param", param)} className="btn btn-sm btn-primary my-4" >
+                <FormattedMessage id="FOLDER.AFFECT_USER_APPOINTMENT" />
+              </NavLink>
+            </div>
+            { folder && folder.status && folder.state &&
+            <div className="py-5">
+              <div className="d-flex align-items-center justify-content-between mb-2">
+                <span className="font-weight-bold mr-2"><FormattedMessage id="FOLDER.INPUT.STATUS" /></span>
+                <span className={`label label-lg label-light-${STATUS_COLOR[folder.status] || ""} label-inline`}><FormattedMessage id={STATUS[folder.status] || ""} /></span>
+              </div>
+              <div className="d-flex align-items-center justify-content-between mb-2">
+                <span className="font-weight-bold mr-2"><FormattedMessage id="FOLDER.INPUT.STATE" /></span>
+                <span className={`label label-lg label-light-${STATE_COLOR[folder.state] || ""} label-inline`}><FormattedMessage id={STATE[folder.state] || ""} /></span>
+              </div>
+            </div>
+            }
+            {/*<!--end::Contact-->*/}
+            <div className="navi navi-bold navi-hover navi-active navi-link-rounded">
+              <ProtectedContent rule={ routes.personalDataForm }>
+                <div className="navi-item mb-2">
+                  <NavLink to={routes.personalDataForm.path.replace(":param", param) } className="navi-link py-4">
+                    <span className="navi-icon mr-2">
+                      <span className="svg-icon">
+                        <FaceIcon />
+                      </span>
+                    </span>
+                    <span className="navi-text font-size-lg"><FormattedMessage id="MENU.PERSONAL_DATA" /></span>
+                  </NavLink>
+                </div>
+              </ProtectedContent>
+              <ProtectedContent rule={ routesDetails.eventsDisplay }>
+                <div className="navi-item mb-2">
+                  <NavLink to={routesDetails.eventsDisplay.path.replace(":param", param) } className="navi-link py-4">
+                    <span className="navi-icon mr-2">
+                      <span className="svg-icon">
+                        <EventIcon />
+                      </span>
+                    </span>
+                    <span className="navi-text font-size-lg"><FormattedMessage id="MENU.EVENT" /></span>
+                  </NavLink>
+                </div>
+              </ProtectedContent>
+              <ProtectedContent rule={ routes.personalDataForm }>
+                <div className="navi-item mb-2">
+                  <NavLink to={"routes.familyIdentificationForm.path"} className="navi-link py-4">
+                    <span className="navi-icon mr-2">
+                      <span className="svg-icon">
+                        <PeopleAltIcon />
+                      </span>
+                    </span>
+                    <span className="navi-text font-size-lg"><FormattedMessage id="MENU.FAMILY_IDENTIFICATION" /></span>
+                  </NavLink>
+                </div>
+              </ProtectedContent>
+              <ProtectedContent rule={ routes.personalDataForm }>
+                <div className="navi-item mb-2">
+                  <NavLink to={"routes.socialAndPhysicalDataForm.path"} className="navi-link py-4">
+                    <span className="navi-icon mr-2">
+                      <span className="svg-icon">
+                        <HealingIcon />
+                      </span>
+                    </span>
+                    <span className="navi-text font-size-lg"><FormattedMessage id="MENU.SOCIAL_AND_PHYSICAL_DATA" /></span>
+                  </NavLink>
+                </div>
+              </ProtectedContent>
+              <ProtectedContent rule={ routes.personalDataForm }>
+                <div className="navi-item mb-2">
+                  <NavLink to={ "routes.academicProfessionalPathForm.path" } className="navi-link py-4">
+                    <span className="navi-icon mr-2">
+                      <span className="svg-icon">
+                        <SchoolIcon />
+                      </span>
+                    </span>
+                    <span className="navi-text font-size-lg"><FormattedMessage id="MENU.FOLDER_ACADEMIC_PROFESSIONAL_PATH" /></span>
+                  </NavLink>
+                </div>
+              </ProtectedContent>
+              <ProtectedContent rule={ routes.personalDataForm }>
+                <div className="navi-item mb-2">
+                  <NavLink to={ "routes.whoAMIForm.path" } className="navi-link py-4">
+                    <span className="navi-icon mr-2">
+                      <span className="svg-icon">
+                        <AssignmentIndIcon />
+                      </span>
+                    </span>
+                    <span className="navi-text font-size-lg"><FormattedMessage id="MENU.FOLDER_WHO_AM_I" /></span>
+                  </NavLink>
+                </div>
+              </ProtectedContent>
+              <ProtectedContent rule={ routes.personalDataForm }>
+                <div className="navi-item mb-2">
+                  <NavLink to={ "routes.folderLicense.path" } className="navi-link py-4">
+                    <span className="navi-icon mr-2">
+                      <span className="svg-icon">
+                        <GavelIcon />
+                      </span>
+                    </span>
+                    <span className="navi-text font-size-lg"><FormattedMessage id="MENU.FOLDER_LICENSE" /></span>
+                  </NavLink>
+                </div>
+              </ProtectedContent>
+            </div>
+          </div>
+          {/*<!--end::Body-->*/}
+        </div>
+        {/*<!--end::Profile Card-->*/}
+      </div>
+      {/*<!--end::Aside-->*/}
+    </>
+  )
+}
+
+
+export default EditFolder

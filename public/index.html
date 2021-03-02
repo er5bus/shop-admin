@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--
+      Environment variable
+    -->
+    <script src="%PUBLIC_URL%/env.js"></script>
+
+    <!--
+      Meta Tags
+    -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Rehabilitation program for kids"
+      />
+    <meta name = "keywords" content = "javascript, react" />
+    <meta name="author" content="Infinity managment" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="%PUBLIC_URL%">
+    <meta property="og:image" content="%PUBLIC_URL%/media/logos/logo.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+    <meta property="og:title" content="second chance program">
+    <meta property="og:locale" content="ar_AR">
+    <meta property="og:site_name" content="second chance program">
+    <meta property="og:description" content="Rehabilitation program for kids">
+
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+
+    <!--
+      Favicons
+    -->
+    <link rel="shortcut icon" href="%PUBLIC_URL%/media/logos/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="%PUBLIC_URL%/media/logos/favicon.ico" type="image/x-icon">
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/media/logos/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="%PUBLIC_URL%/media/logos/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Font Setup -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700%7CRoboto:300,400,500,600,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=B612:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <!-- SPLASH SCREEN-->
+    <link
+      rel="stylesheet"
+      id="layout-styles-anchor"
+      href="%PUBLIC_URL%/css/splash-screen.css"
+      />
+    <title>Second chance program</title>
+  </head>
+  <body id="kt-body">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <div id="splash-screen" class="kt-splash-screen">
+      <img
+        src="%PUBLIC_URL%/media/logos/logo-small.png"
+        alt="Metronic logo"
+        width="250"
+        height="105"
+      />
+      <svg class="splash-spinner" viewBox="0 0 50 50">
+        <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle>
+      </svg>
+    </div>
+    <div id="layout-portal"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+      </body>
+</html>
