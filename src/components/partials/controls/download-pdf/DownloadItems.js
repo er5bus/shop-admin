@@ -48,6 +48,8 @@ const DownloadItems = ({ title, printURL }) => {
   const onDownloadPDF = useCallback(() => {
     setDownloading(true)
     download()
+
+    // eslint-disable-next-line
   }, [fields, object])
 
   if (!_.isEmpty(printURL)) {

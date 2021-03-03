@@ -48,11 +48,11 @@ const ProductActivateDialog = ({ params, show, onHide }) => {
       {isLoading && <ModalProgressBar variant="query" />}
       <Modal.Header closeButton>
         <Modal.Title id="example-modal-sizes-title-lg">
-          <FormattedMessage id="PRODUCT.DELETE.TITLE" />
+          <FormattedMessage id="PRODUCT.ENABLE.TITLE" />
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <FormattedMessage id="PRODUCT.DELETE.MSG" />
+        <FormattedMessage id="PRODUCT.ENABLE.MSG" />
       </Modal.Body>
       <Modal.Footer>
         <div>

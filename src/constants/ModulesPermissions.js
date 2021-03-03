@@ -1,4 +1,4 @@
-import { ACTIVATE, CREATE, UPDATE, DEACTIVATE, VIEW, DELETE, UNDELETE, CLOSE, /*VIEW_UPDATE*/ } from "./Permissions"
+import { ACTIVATE, CREATE, UPDATE, DEACTIVATE, VIEW, DELETE, /*VIEW_UPDATE*/ } from "./Permissions"
 
 
 export const USER = {
@@ -9,8 +9,6 @@ export const USER = {
     [UPDATE]: "change_profile",
     [ACTIVATE]: "activate_profile",
     [DEACTIVATE]: "delete_profile",
-    [DELETE]: "soft_delete_profile",
-    [UNDELETE]: "undelete_profile",
   },
 }
 
@@ -30,7 +28,8 @@ export const PRODUCT = {
     [VIEW]: "view_prodcut",
     [CREATE]: "add_product",
     [UPDATE]: "change_product",
-    [DELETE]: "delete_product"
+    [ACTIVATE]: "activate_product",
+    [DEACTIVATE]: "deactivate_product"
   }
 }
 
@@ -40,7 +39,8 @@ export const ORDER = {
     [VIEW]: "view_order",
     [CREATE]: "add_order",
     [UPDATE]: "change_order",
-    [DELETE]: "delete_order"
+    [ACTIVATE]: "activate_order",
+    [DEACTIVATE]: "deactivate_order"
   }
 }
 
@@ -50,6 +50,7 @@ export const CATEGORY = {
     [VIEW]: "view_category",
     [CREATE]: "add_category",
     [UPDATE]: "change_category",
-    [DELETE]: "delete_category",
+    [ACTIVATE]: "activate_category",
+    [DEACTIVATE]: "deactivate_category"
   }
 }

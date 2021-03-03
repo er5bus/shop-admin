@@ -8,16 +8,16 @@ export const orderItemFields = ({ intl }) => [
     name: "items[].product",
     component: SELECT,
     loadOptions: productUIHelper,
-    label: intl.formatMessage({ id: "PARTNERSHIP.INPUT.PRODUCT" }),
-    placeholder: intl.formatMessage({ id: "PARTNERSHIP.INPUT.PRODUCT" }),
+    label: intl.formatMessage({ id: "ORDER.INPUT.PRODUCT" }),
+    placeholder: intl.formatMessage({ id: "ORDER.INPUT.PRODUCT" }),
     size: 6,
     validation: Yup.number().required()
   },
   {
     name: "items[].quantity",
     component: INPUT,
-    label: intl.formatMessage({ id: "PARTNERSHIP.INPUT.QUANTITY" }),
-    placeholder: intl.formatMessage({ id: "PARTNERSHIP.INPUT.QUANTITY" }),
+    label: intl.formatMessage({ id: "ORDER.INPUT.QUANTITY" }),
+    placeholder: intl.formatMessage({ id: "ORDER.INPUT.QUANTITY" }),
     size: 6,
     validation: Yup.string().max(8)
   }

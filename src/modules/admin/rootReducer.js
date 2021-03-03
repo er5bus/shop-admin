@@ -9,6 +9,8 @@ import profileReducer from "./containers/profile/store/reducers"
 import userReducer from "./containers/user/store/reducers"
 import userGroupReducer from "./containers/user-group/store/reducers"
 
+import statsReducer from "./containers/home/store/reducers"
+
 import categoryReducer from "./containers/category/store/reducers"
 import productReducer from "./containers/product/store/reducers"
 
@@ -23,5 +25,6 @@ export default combineReducers({
   userGroup: userGroupReducer,
   category: categoryReducer,
   product: productReducer,
-  order: orderReducer
+  order: orderReducer,
+  stats: statsReducer
 })

@@ -1,6 +1,4 @@
-# Second chance
-
-Second Chance Program
+# Shop
 
 ## Project Requirements:
 

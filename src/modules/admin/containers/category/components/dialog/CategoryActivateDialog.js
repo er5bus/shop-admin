@@ -48,11 +48,11 @@ const CategoryActivateDialog = ({ params, show, onHide }) => {
       {isLoading && <ModalProgressBar variant="query" />}
       <Modal.Header closeButton>
         <Modal.Title id="example-modal-sizes-title-lg">
-          <FormattedMessage id="CATEGORY.DELETE.TITLE" />
+          <FormattedMessage id="CATEGORY.ENABLE.TITLE" />
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <FormattedMessage id="CATEGORY.DELETE.MSG" />
+        <FormattedMessage id="CATEGORY.ENABLE.MSG" />
       </Modal.Body>
       <Modal.Footer>
         <div>

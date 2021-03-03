@@ -64,7 +64,7 @@ const AsideMenuList = ({ layoutProps }) => {
             >
               <NavLink className="menu-link" to={routes.productList.path}>
                 <span className="svg-icon menu-icon">
-                  <SVG src={toAbsoluteUrl("/media/svg/icons/Files/Folder.svg")} />
+                  <SVG src={toAbsoluteUrl("/media/svg/icons/Shopping/Bag2.svg")} />
                 </span>
                 <span className="menu-text">
                   <FormattedMessage id="MENU.PRODUCT" />
@@ -79,7 +79,7 @@ const AsideMenuList = ({ layoutProps }) => {
             >
               <NavLink className="menu-link" to={routes.categoryList.path}>
                 <span className="svg-icon menu-icon">
-                  <SVG src={toAbsoluteUrl("/media/svg/icons/Files/Group-folders.svg")} />
+                  <SVG src={toAbsoluteUrl("/media/svg/icons/Shopping/Box1.svg")} />
                 </span>
                 <span className="menu-text">
                   <FormattedMessage id="MENU.CATEGORY" />
@@ -92,7 +92,7 @@ const AsideMenuList = ({ layoutProps }) => {
         <ProtectedContents rules={[routes.orderList]}>
           {/* begin::section */}
           <li className="menu-section ">
-            <h4 className="menu-text"><FormattedMessage id="MENU.ORDER" /></h4>
+            <h4 className="menu-text"><FormattedMessage id="MENU.ORDER_MANAGEMENT" /></h4>
             <i className="menu-icon flaticon-more-v2"></i>
           </li>
           {/* end:: section */}
@@ -103,7 +103,7 @@ const AsideMenuList = ({ layoutProps }) => {
             >
               <NavLink className="menu-link" to={routes.orderList.path}>
                 <span className="svg-icon menu-icon">
-                  <SVG src={toAbsoluteUrl("/media/svg/icons/Communication/Adress-book2.svg")} />
+                  <SVG src={toAbsoluteUrl("/media/svg/icons/Shopping/Cart2.svg")} />
                 </span>
                 <span className="menu-text">
                   <FormattedMessage id="MENU.ORDER" />

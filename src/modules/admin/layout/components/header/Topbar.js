@@ -1,8 +1,8 @@
 import React/*, { useMemo }*/ from "react"
 //import objectPath from "object-path"
-import SVG from "react-inlinesvg"
-import { OverlayTrigger, Tooltip } from "react-bootstrap"
-import { toAbsoluteUrl } from "../../../../../helpers"
+///import SVG from "react-inlinesvg"
+//import { OverlayTrigger, Tooltip } from "react-bootstrap"
+//import { toAbsoluteUrl } from "../../../../../helpers"
 import { /*useHtmlClassService,*/ LanguageSelectorDropdown } from "../../../../../components/layout"
 
 //import SearchDropdown from "../extras/dropdowns/search/SearchDropdown"
@@ -16,7 +16,7 @@ const Topbar = () => {
       {/*       {layoutProps.viewSearchDisplay && <SearchDropdown />}
       
       <QuickActionsDropdown />
-      */}
+      
       <OverlayTrigger
         placement="bottom"
         overlay={<Tooltip id="quick-panel-tooltip">Quick panel</Tooltip>}
@@ -40,7 +40,7 @@ const Topbar = () => {
             </span>
           </div>
         </div>
-      </OverlayTrigger>
+      </OverlayTrigger> */}
       <LanguageSelectorDropdown />
       <QuickUserToggler />
     </div>

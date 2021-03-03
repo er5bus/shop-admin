@@ -48,11 +48,11 @@ const OrderActivateDialog = ({ params, show, onHide }) => {
       {isLoading && <ModalProgressBar variant="query" />}
       <Modal.Header closeButton>
         <Modal.Title id="example-modal-sizes-title-lg">
-          <FormattedMessage id="ORDER.DELETE.TITLE" />
+          <FormattedMessage id="ORDER.ENABLE.TITLE" />
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <FormattedMessage id="ORDER.DELETE.MSG" />
+        <FormattedMessage id="ORDER.ENABLE.MSG" />
       </Modal.Body>
       <Modal.Footer>
         <div>

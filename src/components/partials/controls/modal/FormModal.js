@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from "react"
 import { FormattedMessage } from "react-intl"
 
-import { FlashMessages, ModalProgressBar } from "../../controls"
+import { ModalProgressBar } from "../../controls"
 
 import {Button, Modal} from "react-bootstrap"
 import {FormUIProvider} from "../forms/context/FormUIContext"

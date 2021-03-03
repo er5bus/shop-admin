@@ -1,6 +1,6 @@
 {
   "GENERAL.TITLE": "Bienvenue ",
-  "GENERAL.DESC": "Au programme de Deuxième chance",
+  "GENERAL.DESC": "Au l'administration du magasin",
   "GENERAL.BACK": "Retour",
   "GENERAL.NO": "Non",
   "GENERAL.RESET": "Réinitialiser",
@@ -54,6 +54,9 @@
   "GENERAL.PREV": "Précédent",
   "GENERAL.ACTIVE": "Active",
   "GENERAL.ADD": "Ajouter",
+  "STATS.ORDER.INCOME": "Le revenu",
+  "STATS.ORDER.STATUS": "Nombre de commandes par statut",
+  "STATS.ORDER.TIMELINE": "Nombre de commandes par mois",
   "GENERAL.REMOVE": "Effacer",
   "GENERAL.INACTIVE": "Inactif",
   "GENERAL.SHOW": "Afficher",

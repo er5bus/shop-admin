@@ -6,9 +6,9 @@
   "USER.MALE": "Masculin",
   "USER.INPUT.USERNAME": "Nom d'utilisateur",
   "USER.INPUT.EMAIL": "Email",
-  "USER.INPUT.FIRST_NAME_AR": "Prénom (en arabe)",
-  "USER.INPUT.FIRST_NAME_FR": "Prénom (en français)",
-  "USER.INPUT.LAST_NAME_AR": "Nom (en arabe)",
+  "USER.INPUT.FIRST_NAME": "Prénom",
+  "USER.INPUT.LAST_NAME": "Nom",
+  "USER.INPUT.ADDRESS": "Adress",
   "USER.INPUT.CURRENT_PASSWORD": "Mot de passe actuel",
   "USER.INPUT.PASSWORD": "Mot de passe",
   "USER.INPUT.NEW_PASSWORD": "Nouveau mot de passe",
@@ -100,10 +100,9 @@
   "USER_GROUP.MULTIPLE_DELETE.TITLE": "Supprimer les groupe d'utilisateurss sélectionnées",
   "USER_GROUP.DELETE.TITLE": "Supprimer ce groupe d'utilisateurs",
 
-  "PERMISSIONS.PARTNERSHIP": "Partenaires",
-  "PERMISSIONS.SERVICE": "Services",
-  "PERMISSIONS.FOLDER_GROUP": "Groupe des dossiers",
-  "PERMISSIONS.FOLDER": "Dossiers",
+  "PERMISSIONS.CATEGORY": "Catégorie",
+  "PERMISSIONS.ORDER": "Commande",
+  "PERMISSIONS.PRODUCT": "Produit",
   "PERMISSIONS.USER": "Utilisateurs",
   "PERMISSIONS.USER_GROUP": "Groupe dutilisateurs"
 }
