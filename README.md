@@ -17,7 +17,7 @@ Docker is an open platform for developing, shipping, and running applications. D
 Once you have all the needed requirements installed, clone the project:
 
 ``` bash
-git clone GitURL
+git clone https://github.com/er5bus/shop-admin
 ```
 
 #### Configure .env file:
