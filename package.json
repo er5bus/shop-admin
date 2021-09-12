@@ -3,11 +3,11 @@
   "version": "0.0.1",
   "private": true,
   "author": {
-    "name": "Rami Sfari"
+    "name": "Er5bus"
   },
   "repository": {
     "type": "git",
-    "url": "https://gitlab.com/unicef-second-chance/lprs-tn-front-gu.git"
+    "url": "https://github.com/er5bus/shop-admin.git"
   },
   "dependencies": {
     "@formatjs/intl-pluralrules": "1.3.5",
