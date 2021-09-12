@@ -1,8 +1,8 @@
 version: '3'
 
 services:
-  second_chance_program_gu_staging_front:
-    image: registry.gitlab.com/unicef-second-chance/lprs-tn-front-gu:v1
+  shop_staging_front:
+    image: shop:v1
     env_file:
       - ./.env
     deploy:
